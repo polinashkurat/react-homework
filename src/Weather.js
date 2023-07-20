@@ -2,8 +2,9 @@ import React from "react";
 import axios from "axios";
 
 export default function Weather() {
-  <div className="Weather">
-   
+  <div className="Weather"> </div>;
+}
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -40,7 +41,7 @@ function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
+  forecast.forEach(function(forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
@@ -138,6 +139,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemp);
 
 search("Düsseldorf");
-
-    
-  </div>;}
